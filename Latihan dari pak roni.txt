@@ -1,0 +1,47 @@
+Latihan dari pak roni
+menghitung nilai
+
+
+
+import java.util.Scanner;
+
+public class Penilaian {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan NIM: ");
+        String nim = scanner.nextLine();
+
+        System.out.print("Masukkan Nama: ");
+        String nama = scanner.nextLine();
+
+        System.out.print("Masukkan Nilai Tugas: ");
+        double nilaiTugas = scanner.nextDouble();
+
+        System.out.print("Masukkan Nilai UTS: ");
+        double nilaiUTS = scanner.nextDouble();
+
+        System.out.print("Masukkan Nilai UAS: ");
+        double nilaiUAS = scanner.nextDouble();
+
+        double nilaiAkhir = (nilaiTugas * 0.2) + (nilaiUTS * 0.3) + (nilaiUAS * 0.5);
+
+        if (nilaiAkhir >= 80) {
+            System.out.println("Nilai Akhir: " + nilaiAkhir + " (A)");
+        } else if (nilaiAkhir >= 70 && nilaiAkhir < 80) {
+            System.out.println("Nilai Akhir: " + nilaiAkhir + " (B)");
+        } else if (nilaiAkhir >= 60 && nilaiAkhir < 70) {
+            System.out.println("Nilai Akhir: " + nilaiAkhir + " (C)");
+        } else if (nilaiAkhir >= 50 && nilaiAkhir < 60) {
+            System.out.println("Nilai Akhir: " + nilaiAkhir + " (D)");
+        } else {
+            System.out.println("Nilai Akhir: " + nilaiAkhir + " (E)");
+        }
+
+        if (nilaiAkhir >= 60) {
+            System.out.println(nama + " (" + nim + ") LULUS");
+        } else {
+            System.out.println(nama + " (" + nim + ") TIDAK LULUS");
+        }
+    }
+}
